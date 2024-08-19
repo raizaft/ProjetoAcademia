@@ -1,31 +1,42 @@
 <div class="inserir">
   <mat-card class="cardinput">
-    <mat-form-field
-      ><mat-label>Nome</mat-label
-      ><input matInput [(ngModel)]="exercicio.nome" /></mat-form-field
-    ><br />
-    <mat-form-field
-      ><mat-label>Peso</mat-label
-      ><input
-        matInput
-        placeholder="kg"
-        [(ngModel)]="exercicio.peso" /></mat-form-field
-    ><br />
-    <mat-form-field
-      ><mat-label>Séries</mat-label
-      ><input matInput [(ngModel)]="exercicio.serie" /></mat-form-field
-    ><br />
-    <mat-form-field
-      ><mat-label>Repetições</mat-label
-      ><input matInput [(ngModel)]="exercicio.repeticoes" /></mat-form-field
-    ><br />
-    <mat-form-field
-      ><mat-label>Tempo</mat-label
-      ><input
-        matInput
-        placeholder="min"
-        [(ngModel)]="exercicio.tempo" /></mat-form-field
-    ><br />
+    <div class="inputs">
+      <div class="nome">
+        <p>Exercício</p>
+        <mat-form-field
+          ><mat-label>Nome</mat-label
+          ><input matInput [(ngModel)]="exercicio.nome" /></mat-form-field
+        ><br />
+      </div>
+      <div class="musculacao">
+        <p>Musculação</p>
+        <mat-form-field
+          ><mat-label>Peso</mat-label
+          ><input
+            matInput
+            placeholder="kg"
+            [(ngModel)]="exercicio.peso" /></mat-form-field
+        ><br />
+        <mat-form-field
+          ><mat-label>Séries</mat-label
+          ><input matInput [(ngModel)]="exercicio.serie" /></mat-form-field
+        ><br />
+        <mat-form-field
+          ><mat-label>Repetições</mat-label
+          ><input matInput [(ngModel)]="exercicio.repeticoes" /></mat-form-field
+        ><br />
+      </div>
+      <div class="cardio">
+        <p>Cárdio</p>
+        <mat-form-field
+          ><mat-label>Tempo</mat-label
+          ><input
+            matInput
+            placeholder="min"
+            [(ngModel)]="exercicio.tempo" /></mat-form-field
+        ><br />
+      </div>
+    </div>
     <button class="addbutton" mat-fab (click)="inserirExercicio()">
       <mat-icon>add</mat-icon>
     </button>
