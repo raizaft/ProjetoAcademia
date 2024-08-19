@@ -9,4 +9,17 @@ import { EXERCICIOS } from '../../shared/model/EXERCICIOS';
 })
 export class ListagemExercicioComponent {
   exercicios = EXERCICIOS;
+
+  editar(exercicio: Exercicio) {
+    exercicio.nome += 'Alterado';
+  }
+
+  remover(exercicio: Exercicio) {
+    const indxExercicioARemover = this.exercicios.findIndex(
+      (e) => e.nome === exercicio.nome
+    );
+    if (indxExercicioARemover > -1) {
+      this.exercicios.splice(indxExercicioARemover, 1);
+    }
+  }
 }
