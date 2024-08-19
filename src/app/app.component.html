@@ -1,32 +1,7 @@
+<app-menu></app-menu>
+
 <h3>{{ title }}</h3>
 
-<mat-form-field
-  ><mat-label>Nome</mat-label
-  ><input matInput [(ngModel)]="exercicio.nome" /></mat-form-field
-><br />
-<mat-form-field
-  ><mat-label>Peso</mat-label
-  ><input matInput [(ngModel)]="exercicio.peso" /></mat-form-field
-><br />
-<mat-form-field
-  ><mat-label>Séries</mat-label
-  ><input matInput [(ngModel)]="exercicio.serie" /></mat-form-field
-><br />
-<mat-form-field
-  ><mat-label>Repetições</mat-label
-  ><input matInput [(ngModel)]="exercicio.repeticoes" /></mat-form-field
-><br />
-<mat-form-field
-  ><mat-label>Tempo</mat-label
-  ><input matInput [(ngModel)]="exercicio.tempo" /></mat-form-field
-><br />
+<app-cadastro-exercicio></app-cadastro-exercicio>
 
-<button mat-flat-button (click)="inserirExercicio()">
-  <mat-icon>add</mat-icon>
-</button>
-
-<ul>
-  <li *ngFor="let exercicio of exercicios">
-    {{ exercicio.nome }}
-  </li>
-</ul>
+<app-listagem-exercicio></app-listagem-exercicio>

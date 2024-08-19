@@ -1,0 +1,22 @@
+<div class="exercicios">
+  <mat-card class="cardexercicio" *ngFor="let exercicio of exercicios">
+    <mat-card-header>
+      <mat-card-title class="cardtitle"
+        ><mat-icon *ngIf="exercicio.peso">fitness_center</mat-icon
+        ><mat-icon *ngIf="exercicio.tempo">monitor_heart</mat-icon
+        >{{ exercicio.nome }}</mat-card-title
+      >
+      <mat-card-subtitle class="cardsubtitle" *ngIf="exercicio.peso"
+        >Peso: {{ exercicio.peso }}kg | Séries: {{ exercicio.serie }} |
+        Repetições: {{ exercicio.repeticoes }}</mat-card-subtitle
+      >
+      <mat-card-subtitle class="cardsubtitle" *ngIf="exercicio.tempo"
+        >Tempo: {{ exercicio.tempo }}min</mat-card-subtitle
+      >
+    </mat-card-header>
+    <div class="actionicons">
+      <mat-icon>edit</mat-icon>
+      <mat-icon>delete</mat-icon>
+    </div>
+  </mat-card>
+</div>

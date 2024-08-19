@@ -9,6 +9,10 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { ExercicioModule } from './exercicio/exercicio.module';
+import { LayoutModule } from './layout/layout.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +24,10 @@ import { MatIconModule } from '@angular/material/icon';
     MatInputModule,
     MatButtonModule,
     MatIconModule,
+    MatCardModule,
+    ExercicioModule,
+    LayoutModule,
+    BrowserAnimationsModule,
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
